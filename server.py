@@ -16,10 +16,16 @@ s.listen(1)
 conn, addr = s.accept()
 print ('Connection address:', addr)
 while 1:
+    senddata = True
     data = conn.recv(BUFFER_SIZE)
     data1 = data.strip()
     if not data: break
     print ("received data:", data)
+    for obj in list:
+        print("test")
+        if data1 == obj.name:
+            conn.send(obj.value + "\n")
+            senddata = False
     if data1.lower() == 'author':
         conn.send('Oliver Fay\n')
     elif data1.lower() == 'hello':
@@ -30,10 +36,7 @@ while 1:
         conn.send('you did it\n')
     elif not data1.find('=') == -1:
         conn.send(variableAssign(data1))
-    elif data1.find('+') or data1.find('/') or data1.find('*') or data1.find('**') or data1.find('-'):
+    elif senddata:
+        print("test3")
         conn.send(doMath(data1))
-    for obj in list:
-        print("test")
-        if data1 == obj.name:
-            conn.send(obj.value + "\n")
     #conn.send(data1 + '\n')  # echo

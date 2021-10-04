@@ -32,9 +32,15 @@ The server can handle certain specified comands such as variable assignment, mat
 - author
 - hello
 - help
-- myVar = 123
+- x = 123
 - 5 + 5
 
 ##testing
 
 Run the executable file to test full array of commands
+The .expect script runs very slow but it will get there
+I attepted using a .sh script but .expect is designed for telnet
+
+```bash
+./test.expect
+```
