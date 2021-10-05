@@ -1,4 +1,4 @@
-#Oliver Fays Telnet Server
+# Oliver Fays Telnet Server
 
 This is a simple server that one can connect to via telnet and run some commands
 
@@ -10,7 +10,7 @@ Pull the files into a local reposetory and open up a terminal in the same repose
 python server.py
 ```
 
-##connecting to server
+## connecting to server
 
 The server will run on port 5005 or whatever port you specify in server.py to connect run the command:
 
@@ -25,7 +25,7 @@ to disconnect:
 close
 ```
 
-##how to use
+## how to use
 
 The server can handle certain specified comands such as variable assignment, math expressions, and more.
 
@@ -35,7 +35,7 @@ The server can handle certain specified comands such as variable assignment, mat
 - x = 123
 - 5 + 5
 
-##testing
+## testing
 
 Run the executable file on the device you're using to connect to test full array of commands
 The .expect script runs very slow but it will get there
