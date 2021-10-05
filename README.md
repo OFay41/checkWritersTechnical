@@ -37,7 +37,7 @@ The server can handle certain specified comands such as variable assignment, mat
 
 ##testing
 
-Run the executable file to test full array of commands
+Run the executable file on the device you're using to connect to test full array of commands
 The .expect script runs very slow but it will get there
 I attepted using a .sh script but .expect is designed for telnet
 
