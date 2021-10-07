@@ -18,7 +18,7 @@ list = []
 def variableAssign(variableData):
     check = True
     #checks to see if their are spaces in the variable name (can be better) and formats data
-    if variableData.find(" ") == variableData.find('=') - 1:
+    if variableData.find(" ") == variableData.find('=') - 1 or variableData.find(" ") == -1:
         data2 = variableData.replace(" ", "")
         x = data2.split('=')
         #checks if value of variable is valid
